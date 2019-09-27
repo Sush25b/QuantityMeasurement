@@ -19,4 +19,13 @@ public class QuantityMeasurementTest {
 
         assertTrue(oneFeet.compare(oneFeet));
     }
+
+    @Test
+    public void givenFirstFeetValueAsOneAndSecondFeetValueAsTwo_whenCompareFeet_thenShouldNotBeEqual() {
+        Quantity firstFeet = new Quantity(1, "feet");
+        Quantity secondFeet = new Quantity(2, "feet");
+
+        assertFalse(firstFeet.compare(secondFeet));
+    }
+
 }
