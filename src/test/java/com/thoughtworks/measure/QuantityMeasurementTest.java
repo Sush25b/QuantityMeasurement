@@ -27,5 +27,10 @@ public class QuantityMeasurementTest {
 
         assertFalse(firstFeet.compare(secondFeet));
     }
+    @Test
+    public void givenInchAsZero_whenCompareInch_thenShouldBeEqual() {
+        Quantity zeroInch = new Quantity(0, "inch");
 
+        assertTrue(zeroInch.compare(zeroInch));
+    }
 }
