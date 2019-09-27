@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.thoughtworks.measure.QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-09-27T04:37:35" hostname="Sushants-MacBook-Pro.local" time="0.001">
+<testsuite name="com.thoughtworks.measure.QuantityMeasurementTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-09-27T05:37:51" hostname="Sushants-MacBook-Pro.local" time="0.001">
   <properties/>
-  <testcase name="givenFeetAsZero_whenCompareLength_thenReturnZeroInch" classname="com.thoughtworks.measure.QuantityMeasurementTest" time="0.001"/>
+  <testcase name="givenFeetAsZero_whenCompareFeet_thenShouldBeEqual" classname="com.thoughtworks.measure.QuantityMeasurementTest" time="0.001"/>
+  <testcase name="givenFeetAsOne_whenCompareFeet_thenShouldBeEqual" classname="com.thoughtworks.measure.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="givenFirstFeetAsOneAndSecondAsTwo_whenCompareFeet_thenShouldNotBeEqual" classname="com.thoughtworks.measure.QuantityMeasurementTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
