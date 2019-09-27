@@ -2,43 +2,47 @@ package com.thoughtworks.measure;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class QuantityMeasurementTest {
+
     @Test
     public void givenFeetAsZero_whenCompareFeet_thenShouldBeEqual() {
-        Quantity zeroFeet = new Quantity(0, "feet");
+        Quantity zeroFeet = new Quantity(0, Quantity.Unit.feet);
+        Quantity anotherZeroFeet = new Quantity(0, Quantity.Unit.feet);
 
-        assertTrue(zeroFeet.compare(zeroFeet));
+        assertEquals(zeroFeet, anotherZeroFeet);
     }
 
     @Test
     public void givenFeetAsOne_whenCompareFeet_thenShouldBeEqual() {
-        Quantity oneFeet = new Quantity(1, "feet");
+        Quantity oneFeet = new Quantity(1, Quantity.Unit.feet);
+        Quantity anotherOneFeet = new Quantity(1, Quantity.Unit.feet);
 
-        assertTrue(oneFeet.compare(oneFeet));
+        assertEquals(oneFeet, anotherOneFeet);
     }
 
     @Test
     public void givenFirstFeetValueAsOneAndSecondFeetValueAsTwo_whenCompareFeet_thenShouldNotBeEqual() {
-        Quantity firstFeet = new Quantity(1, "feet");
-        Quantity secondFeet = new Quantity(2, "feet");
+        Quantity firstFeet = new Quantity(1, Quantity.Unit.feet);
+        Quantity secondFeet = new Quantity(2, Quantity.Unit.feet);
 
-        assertFalse(firstFeet.compare(secondFeet));
+        assertFalse(firstFeet.equals(secondFeet));
     }
 
     @Test
-    public void givenInchAsZero_whenCompareInch_thenShouldBeEqual() {
-        Quantity zeroInch = new Quantity(0, "inch");
+    public void givenFeetAsOneAndAObject_whenCompareFeet_thenShouldNoteBeEqual() {
+        Quantity zeroFeet = new Quantity(0, Quantity.Unit.feet);
 
-        assertTrue(zeroInch.compare(zeroInch));
+        assertFalse(zeroFeet.equals(new Object()));
     }
+
     @Test
-    public void givenInchAsOne_whenCompareInch_thenShouldBeEqual() {
-        Quantity oneInch = new Quantity(1, "inch");
+    public void givenFeetAsOneAndNull_whenCompareFeet_thenShouldNoteBeEqual() {
+        Quantity zeroFeet = new Quantity(0, Quantity.Unit.feet);
 
-        assertTrue(oneInch.compare(oneInch));
+        assertFalse(zeroFeet.equals(null));
     }
+
 
 }

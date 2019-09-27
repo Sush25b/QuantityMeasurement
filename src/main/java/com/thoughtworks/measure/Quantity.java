@@ -3,17 +3,34 @@ package com.thoughtworks.measure;
 public class Quantity
 {
     private final int value;
-    private final String unit;
+    public  Unit unit;          //enum
 
-    public Quantity(int value, String unit)
-    {
-        this.value = value;
-        this.unit = unit;
+    enum Unit{
+        feet,inch
     }
 
-    public boolean compare(Quantity quantity)
+    public Quantity(int value, Unit unit) {
+        this.value = value;
+    }
+
+    @Override
+    public boolean equals(Object object)
     {
-        return this.value==quantity.value;
+        if(!(object instanceof Quantity))
+        {
+            return false;
+        }
+
+        Quantity q= (Quantity) object;
+        return this.value==q.value;
     }
 
 }
+
+
+
+
+//    public boolean compare(Quantity quantity)
+//    {
+//        return this.value==quantity.value;
+//    }
