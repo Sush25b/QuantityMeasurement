@@ -12,4 +12,11 @@ public class QuantityMeasurementTest {
 
         assertTrue(zeroFeet.compare(zeroFeet));
     }
+
+    @Test
+    public void givenFeetAsOne_whenCompareFeet_thenShouldBeEqual() {
+        Quantity oneFeet = new Quantity(1, "feet");
+
+        assertTrue(oneFeet.compare(oneFeet));
+    }
 }
