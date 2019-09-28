@@ -13,4 +13,13 @@ public class InchTest{
 
         assertEquals(zeroInch, anotherZeroInch);
     }
+    @Test
+    public void givenInchAsOne_whenCompareInch_thenShouldBeEqual()
+    {
+        Inch oneInch = new Inch(1);
+        Inch anotherOneInch = new Inch(1);
+
+        assertEquals(oneInch, anotherOneInch);
+    }
+
 }
