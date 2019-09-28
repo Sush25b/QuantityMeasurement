@@ -44,5 +44,12 @@ public class QuantityTest {
         assertFalse(zeroFeet.equals(null));
     }
 
+    @Test
+    public void givenInchAsZero_whenCompareInch_thenShouldBeEqual() {
+        Quantity zeroInch = new Quantity(0, Quantity.Unit.inch);
+        Quantity anotherZeroInch = new Quantity(0, Quantity.Unit.inch);
+
+        assertEquals(zeroInch, anotherZeroInch);
+    }
 
 }

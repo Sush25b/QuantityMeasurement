@@ -6,7 +6,7 @@ public class Quantity
     public  Unit unit;          //enum
 
     enum Unit{
-        feet
+        feet,inch
     }
 
     public Quantity(int value, Unit unit) {
