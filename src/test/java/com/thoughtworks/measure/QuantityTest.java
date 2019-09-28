@@ -51,5 +51,12 @@ public class QuantityTest {
 
         assertEquals(zeroInch, anotherZeroInch);
     }
+    @Test
+    public void givenInchAsOne_whenCompareInch_thenShouldBeEqual() {
+        Quantity oneInch = new Quantity(1, Quantity.Unit.inch);
+        Quantity anotherOneInch = new Quantity(1, Quantity.Unit.inch);
+
+        assertEquals(oneInch, anotherOneInch);
+    }
 
 }
