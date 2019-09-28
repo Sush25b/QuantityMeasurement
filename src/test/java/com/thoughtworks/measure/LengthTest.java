@@ -88,4 +88,11 @@ public class LengthTest
 
         assertFalse(zeroFeet.equals(null));
     }
+
+    @Test
+    public void givenFeetAsOneAndInchAsOne_whenCompareBoth_thenShouldNoteBeEqual() {
+        Length oneFeet = new Length(0,Length.Unit.feet);
+        Length oneInch = new Length(0,Length.Unit.inch);
+        assertFalse(oneFeet.equals(oneInch));
+    }
 }
