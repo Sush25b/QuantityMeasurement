@@ -1,27 +1,27 @@
 package com.thoughtworks.measure;
 
-public class Quantity
+public class Feet
 {
     private final int value;
     public  Unit unit;          //enum
 
     enum Unit{
-        feet,inch
+        feet
     }
 
-    public Quantity(int value, Unit unit) {
+    public Feet(int value, Unit unit) {
         this.value = value;
     }
 
     @Override
     public boolean equals(Object object)
     {
-        if(!(object instanceof Quantity))
+        if(!(object instanceof Feet))
         {
             return false;
         }
 
-        Quantity q= (Quantity) object;
+        Feet q= (Feet) object;
         return this.value==q.value;
     }
 
