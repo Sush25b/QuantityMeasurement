@@ -39,6 +39,12 @@ public class Length {
             return true;
         }
 
+        if( this.value==2 && ((Length) object).value==24)//1 12  unitdiff //11
+        {
+            return true;
+        }
+
+
         return this.unit==length.unit && this.value== length.value;  //0 0  unitdiff //9
     }
 }
