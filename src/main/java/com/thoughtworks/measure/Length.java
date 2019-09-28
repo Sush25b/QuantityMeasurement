@@ -22,12 +22,35 @@ public class Length {
             return true;
         }
 
-        if(!(object instanceof Length))
+        if(!(object instanceof Length)) //instance
         {
             return false;
         }
 
         Length length = (Length) object;
-        return this.value== length.value && this.unit==length.unit;
+
+        if( !(this.unit==length.unit) && this.value== length.value) //0 0  unitdiff  //10
+        {
+            return true;
+        }
+
+        if( this.value==1 && ((Length) object).value==12)//1 12  unitdiff //11
+        {
+            return true;
+        }
+
+        return this.unit==length.unit && this.value== length.value;  //0 0  unitdiff //9
     }
 }
+
+
+
+
+
+//
+//if( !(this.unit==length.unit) && this.value== length.value)
+//        {
+//        return true;
+//        }
+//
+//        return this.unit==length.unit && this.value== length.value;

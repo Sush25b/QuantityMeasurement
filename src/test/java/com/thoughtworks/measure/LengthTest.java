@@ -2,8 +2,7 @@ package com.thoughtworks.measure;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.*;
 
 public class LengthTest
 {
@@ -89,10 +88,24 @@ public class LengthTest
         assertFalse(zeroFeet.equals(null));
     }
 
+    //Compare feet and inch unit
     @Test
-    public void givenFeetAsOneAndInchAsOne_whenCompareBoth_thenShouldNoteBeEqual() {
+    public void givenFeetAsOneAndInchAsZero_whenCompareBothUnit_thenShouldNoteBeEqual() {
+        Length oneFeet = new Length(1,Length.Unit.feet);
+        Length zeroInch = new Length(0,Length.Unit.inch);
+        assertFalse(oneFeet.equals(zeroInch));
+    }
+
+    @Test
+    public void givenFeetAsZeroAndInchAsZero_whenCompareBoth_thenShouldBeEqual() {
         Length oneFeet = new Length(0,Length.Unit.feet);
         Length oneInch = new Length(0,Length.Unit.inch);
-        assertFalse(oneFeet.equals(oneInch));
+        assertTrue(oneFeet.equals(oneInch));
+    }
+    @Test
+    public void givenFeetAsOneAndInchAsTwelve_whenCompareBoth_thenShouldBeTrue() {
+        Length oneFeet = new Length(1,Length.Unit.feet);
+        Length twelveInch = new Length(12,Length.Unit.inch);
+        assertTrue(oneFeet.equals(twelveInch));
     }
 }
