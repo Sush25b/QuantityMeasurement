@@ -3,13 +3,8 @@ package com.thoughtworks.measure;
 public class Feet
 {
     private final int value;
-    public  Unit unit;          //enum
 
-    enum Unit{
-        feet
-    }
-
-    public Feet(int value, Unit unit) {
+    public Feet(int value) {
         this.value = value;
     }
 
@@ -26,11 +21,3 @@ public class Feet
     }
 
 }
-
-
-
-
-//    public boolean compare(Quantity quantity)
-//    {
-//        return this.value==quantity.value;
-//    }
