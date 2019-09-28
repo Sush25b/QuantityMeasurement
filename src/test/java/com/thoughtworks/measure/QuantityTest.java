@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class QuantityMeasurementTest {
+public class QuantityTest {
 
     @Test
     public void givenFeetAsZero_whenCompareFeet_thenShouldBeEqual() {
