@@ -29,28 +29,31 @@ public class Length {
 
         Length length = (Length) object;
 
-        if( !(this.unit==length.unit) && this.value== length.value) //0 0  unitdiff  //10
+        if( !(this.unit==length.unit) )//1 12  unitdiff
         {
-            return true;
+            int FFET_TO_INCH = this.value * 12;
+            return ((Length) object).value==FFET_TO_INCH ;
         }
 
-        if( this.value==1 && ((Length) object).value==12)//1 12  unitdiff //11
-        {
-            return true;
-        }
-
-        if( this.value==2 && ((Length) object).value==24)//1 12  unitdiff //11
-        {
-            return true;
-        }
-
-
-        return this.unit==length.unit && this.value== length.value;  //0 0  unitdiff //9
+        return this.unit==length.unit && this.value== length.value;
     }
 }
 
 
 
+
+
+
+
+
+
+
+
+
+//        if( !(this.unit==length.unit) && this.value== length.value) //0 0  unitdiff  //10
+//        {
+//            return true;
+//        }
 
 
 //

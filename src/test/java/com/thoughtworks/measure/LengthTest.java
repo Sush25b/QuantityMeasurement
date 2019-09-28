@@ -115,4 +115,10 @@ public class LengthTest
         Length twentyFourInch = new Length(24,Length.Unit.inch);
         assertTrue(twoFeet.equals(twentyFourInch));
     }
+    @Test
+    public void givenFeetAsThreeAndInchAsThirtySix_whenCompareBoth_thenShouldBeTrue() {
+        Length threeFeet = new Length(3,Length.Unit.feet);
+        Length thirtSixInch = new Length(36,Length.Unit.inch);
+        assertTrue(threeFeet.equals(thirtSixInch));
+    }
 }
