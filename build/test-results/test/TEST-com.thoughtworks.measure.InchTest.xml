@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.thoughtworks.measure.InchTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-09-28T05:09:16" hostname="Sushants-MacBook-Pro.local" time="0.0">
+  <properties/>
+  <testcase name="givenInchAsZero_whenCompareInch_thenShouldBeEqual" classname="com.thoughtworks.measure.InchTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
