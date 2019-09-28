@@ -100,12 +100,14 @@ public class LengthTest
     public void givenFeetAsZeroAndInchAsZero_whenCompareBoth_thenShouldBeEqual() {
         Length oneFeet = new Length(0,Length.Unit.feet);
         Length oneInch = new Length(0,Length.Unit.inch);
+
         assertTrue(oneFeet.equals(oneInch));
     }
     @Test
     public void givenFeetAsOneAndInchAsTwelve_whenCompareBoth_thenShouldBeTrue() {
         Length oneFeet = new Length(1,Length.Unit.feet);
         Length twelveInch = new Length(12,Length.Unit.inch);
+
         assertTrue(oneFeet.equals(twelveInch));
     }
 
@@ -113,12 +115,22 @@ public class LengthTest
     public void givenFeetAsTwoAndInchAsTwentyFour_whenCompareBoth_thenShouldBeTrue() {
         Length twoFeet = new Length(2,Length.Unit.feet);
         Length twentyFourInch = new Length(24,Length.Unit.inch);
+
         assertTrue(twoFeet.equals(twentyFourInch));
     }
     @Test
     public void givenFeetAsThreeAndInchAsThirtySix_whenCompareBoth_thenShouldBeTrue() {
         Length threeFeet = new Length(3,Length.Unit.feet);
         Length thirtSixInch = new Length(36,Length.Unit.inch);
+
         assertTrue(threeFeet.equals(thirtSixInch));
+    }
+
+    @Test
+    public void givenFeetAsTwelveAndInchAsOne_whenCompareBoth_thenShouldBeTrue() {
+        Length twelveInch = new Length(12,Length.Unit.inch);
+        Length oneFeet = new Length(1,Length.Unit.feet);
+
+        assertTrue(twelveInch.equals(oneFeet));
     }
 }

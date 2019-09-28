@@ -28,11 +28,16 @@ public class Length {
         }
 
         Length length = (Length) object;
-
-        if( !(this.unit==length.unit) )//1 12  unitdiff
+        if( this.unit== Unit.feet && !(this.unit==length.unit) )
         {
-            int FFET_TO_INCH = this.value * 12;
-            return ((Length) object).value==FFET_TO_INCH ;
+            int FFET_TO_INCH = this.value * 12;                     //12 1
+            return (length.value==FFET_TO_INCH );
+        }
+
+        if( this.unit== Unit.inch && !(this.unit==length.unit) )
+        {
+            int INCH_TO_FEET = this.value / 12;                     //12 1
+            return (length.value==INCH_TO_FEET) ;
         }
 
         return this.unit==length.unit && this.value== length.value;
