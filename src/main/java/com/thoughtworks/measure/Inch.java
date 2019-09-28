@@ -11,6 +11,7 @@ public class Inch {
     @Override
     public boolean equals(Object object)
     {
-        return true;
+        Inch inch= (Inch) object;
+        return this.value== inch.value;
     }
 }

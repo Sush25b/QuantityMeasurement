@@ -3,6 +3,7 @@ package com.thoughtworks.measure;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class InchTest{
     @Test
@@ -13,6 +14,7 @@ public class InchTest{
 
         assertEquals(zeroInch, anotherZeroInch);
     }
+
     @Test
     public void givenInchAsOne_whenCompareInch_thenShouldBeEqual()
     {
@@ -22,4 +24,12 @@ public class InchTest{
         assertEquals(oneInch, anotherOneInch);
     }
 
+    @Test
+    public void givenFirstInchAsOneAndSecondInchAsTwo_whenCompareFeet_thenShouldNotBeEqual()
+    {
+        Inch firstInch = new Inch(1);
+        Inch secondInch = new Inch(2);
+
+        assertFalse(firstInch.equals(secondInch));
+    }
 }
