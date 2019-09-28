@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.thoughtworks.measure.FeetTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-09-28T05:20:18" hostname="Sushants-MacBook-Pro.local" time="0.001">
+<testsuite name="com.thoughtworks.measure.FeetTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-09-28T05:21:39" hostname="Sushants-MacBook-Pro.local" time="0.002">
   <properties/>
   <testcase name="givenFeetAsZero_whenCompareFeet_thenShouldBeEqual" classname="com.thoughtworks.measure.FeetTest" time="0.001"/>
   <testcase name="givenFeetAsOne_whenCompareFeet_thenShouldBeEqual" classname="com.thoughtworks.measure.FeetTest" time="0.0"/>

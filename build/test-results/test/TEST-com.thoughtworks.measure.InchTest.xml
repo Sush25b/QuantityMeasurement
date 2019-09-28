@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.thoughtworks.measure.InchTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-09-28T05:20:18" hostname="Sushants-MacBook-Pro.local" time="0.003">
+<testsuite name="com.thoughtworks.measure.InchTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-09-28T05:21:39" hostname="Sushants-MacBook-Pro.local" time="0.001">
   <properties/>
-  <testcase name="givenInchAsZero_whenCompareInch_thenShouldBeEqual" classname="com.thoughtworks.measure.InchTest" time="0.002"/>
+  <testcase name="givenInchAsZero_whenCompareInch_thenShouldBeEqual" classname="com.thoughtworks.measure.InchTest" time="0.0"/>
   <testcase name="givenFirstInchAsOneAndSecondInchAsTwo_whenCompareFeet_thenShouldNotBeEqual" classname="com.thoughtworks.measure.InchTest" time="0.0"/>
+  <testcase name="givenInchAsZeroAndNull_whenCompareInch_thenShouldNotBeEqual" classname="com.thoughtworks.measure.InchTest" time="0.0"/>
   <testcase name="givenInchAsOne_whenCompareInch_thenShouldBeEqual" classname="com.thoughtworks.measure.InchTest" time="0.0"/>
   <testcase name="givenInchAsZeroAndObject_whenCompareInch_thenShouldNotBeEqual" classname="com.thoughtworks.measure.InchTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

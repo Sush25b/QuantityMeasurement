@@ -40,4 +40,12 @@ public class InchTest{
 
         assertFalse(zeroInch.equals(new Object()));
     }
+
+    @Test
+    public void givenInchAsZeroAndNull_whenCompareInch_thenShouldNotBeEqual()
+    {
+        Inch zeroInch = new Inch(0);
+
+        assertFalse(zeroInch.equals(null));
+    }
 }
