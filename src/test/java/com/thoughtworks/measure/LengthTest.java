@@ -152,4 +152,12 @@ public class LengthTest
 
         assertTrue(zeroYard.equals(zeroYard));
     }
+
+    @Test
+    public void givenOneYard_whenCompareYard_thenShouldBeEqual()
+    {
+        Length oneYard = new Length(1,Length.Unit.yard);
+
+        assertTrue(oneYard.equals(oneYard));
+    }
 }

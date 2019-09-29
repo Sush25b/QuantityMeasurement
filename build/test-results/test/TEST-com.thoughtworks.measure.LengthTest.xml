@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.thoughtworks.measure.LengthTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2019-09-29T03:47:42" hostname="Sushants-MacBook-Pro.local" time="0.004">
+<testsuite name="com.thoughtworks.measure.LengthTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2019-09-29T03:49:50" hostname="Sushants-MacBook-Pro.local" time="0.005">
   <properties/>
   <testcase name="givenFeetAsZeroAndInchAsZero_whenCompareBoth_thenShouldBeEqual" classname="com.thoughtworks.measure.LengthTest" time="0.001"/>
   <testcase name="givenFeetAsOneAndInchAsTwelve_whenCompareBoth_thenShouldBeTrue" classname="com.thoughtworks.measure.LengthTest" time="0.0"/>
   <testcase name="givenFeetAsZero_whenCompareFeet_thenShouldBeEqual" classname="com.thoughtworks.measure.LengthTest" time="0.0"/>
   <testcase name="givenFeetAsOneAndInchAsZero_whenCompareBothUnit_thenShouldNoteBeEqual" classname="com.thoughtworks.measure.LengthTest" time="0.0"/>
   <testcase name="givenFeetAsTwoAndInchAsTwentyFour_whenCompareBoth_thenShouldBeTrue" classname="com.thoughtworks.measure.LengthTest" time="0.0"/>
+  <testcase name="givenOneYard_whenCompareYard_thenShouldBeEqual" classname="com.thoughtworks.measure.LengthTest" time="0.0"/>
   <testcase name="givenFeetAsOne_whenCompareFeet_thenShouldBeEqual" classname="com.thoughtworks.measure.LengthTest" time="0.0"/>
-  <testcase name="givenFirstFeetValueAsOneAndSecondFeetValueAsTwo_whenCompareFeet_thenShouldNotBeEqual" classname="com.thoughtworks.measure.LengthTest" time="0.001"/>
+  <testcase name="givenFirstFeetValueAsOneAndSecondFeetValueAsTwo_whenCompareFeet_thenShouldNotBeEqual" classname="com.thoughtworks.measure.LengthTest" time="0.0"/>
   <testcase name="givenInchAsTwelveAndFeetAsOne_whenCompareBoth_thenShouldBeTrue" classname="com.thoughtworks.measure.LengthTest" time="0.0"/>
   <testcase name="givenInchAsZero_whenCompareInch_thenShouldBeEqual" classname="com.thoughtworks.measure.LengthTest" time="0.0"/>
   <testcase name="givenFirstInchAsOneAndSecondInchAsTwo_whenCompareFeet_thenShouldNotBeEqual" classname="com.thoughtworks.measure.LengthTest" time="0.0"/>
@@ -17,7 +18,7 @@
   <testcase name="givenInchAsTwelveAndInchAsTwelve_whenCompareBoth_thenShouldBeTrue" classname="com.thoughtworks.measure.LengthTest" time="0.0"/>
   <testcase name="givenInchAsZeroAndObject_whenCompareInch_thenShouldNotBeEqual" classname="com.thoughtworks.measure.LengthTest" time="0.0"/>
   <testcase name="givenFeetAsOneAndNull_whenCompareFeet_thenShouldNoteBeEqual" classname="com.thoughtworks.measure.LengthTest" time="0.0"/>
-  <testcase name="givenFeetAsThreeAndInchAsThirtySix_whenCompareBoth_thenShouldBeTrue" classname="com.thoughtworks.measure.LengthTest" time="0.0"/>
+  <testcase name="givenFeetAsThreeAndInchAsThirtySix_whenCompareBoth_thenShouldBeTrue" classname="com.thoughtworks.measure.LengthTest" time="0.001"/>
   <testcase name="givenFeetAsOneAndAObject_whenCompareFeet_thenShouldNoteBeEqual" classname="com.thoughtworks.measure.LengthTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
