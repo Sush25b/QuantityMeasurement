@@ -6,18 +6,28 @@ public class Length {
     private Unit unit;
 
     enum Unit {
-        feet, inch, yard;
+        feet, inch;
+
+//        private double converter;
+//
+//        Unit(double converter) {
+//            this.converter = converter;
+//        }
+//
+//        public double convertToBaseInch(Length length) {
+//            return length.value * converter;
+//        }
 
         public double convertToBaseInch(Length length)
         {
             if (length.unit == feet) {
                 return length.value * 12.0;
             }
+
             return length.value;
         }
 
     }
-
     public Length(int value, Unit unit) {
         this.value = value;
         this.unit = unit;
@@ -40,6 +50,15 @@ public class Length {
         return (this.unit.convertToBaseInch(this) == this.unit.convertToBaseInch(length));
     }
 }
+
+
+
+
+
+
+
+
+
 
 
 //        if( !(this.unit==length.unit) && this.value== length.value) //0 0  unitdiff  //10

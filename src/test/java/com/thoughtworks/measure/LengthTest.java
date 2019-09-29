@@ -145,64 +145,71 @@ public class LengthTest
 
 
     /////////
-    @Test
-    public void givenZeroYard_whenCompareYard_thenShouldBeEqual()
-    {
-        Length zeroYard = new Length(0,Length.Unit.yard);
+//    @Test
+//    public void givenZeroYard_whenCompareYard_thenShouldBeEqual()
+//    {
+//        Length zeroYard = new Length(0,Length.Unit.yard);
+//
+//        assertTrue(zeroYard.equals(zeroYard));
+//    }
+//
+//    @Test
+//    public void givenOneYard_whenCompareYard_thenShouldBeEqual()
+//    {
+//        Length oneYard = new Length(1,Length.Unit.yard);
+//
+//        assertTrue(oneYard.equals(oneYard));
+//    }
+//
+//    @Test
+//    public void givenFirstYardAsOneAndSecondYardAsTwo_whenCompareYard_thenShouldNotBeEqual()
+//    {
+//        Length firstYard = new Length(1,Length.Unit.yard);
+//        Length secondYard = new Length(2,Length.Unit.yard);
+//
+//        assertFalse(firstYard.equals(secondYard));
+//    }
+//
+//    @Test
+//    public void givenOneYardAndObject_whenCompareYard_thenShouldNotBeEqual()
+//    {
+//        Length oneYard = new Length(1,Length.Unit.yard);
+//
+//        assertFalse(oneYard.equals(new Object()));
+//    }
+//
+//    @Test
+//    public void givenOneYardAndANull_whenCompareYard_thenShouldNotBeEqual()
+//    {
+//        Length oneYard = new Length(1,Length.Unit.yard);
+//
+//        assertFalse(oneYard.equals(null));
+//    }
+//
+//    @Test
+//    public void givenOneYardAndOneFeet_whenCompareUnits_thenShouldNotBeEqual()
+//    {
+//        Length oneYard = new Length(1,Length.Unit.yard);
+//        Length oneFeet = new Length(1,Length.Unit.feet);
+//
+//        assertFalse(oneYard.equals(oneFeet));
+//    }
+//
+//    @Test
+//    public void givenZeroYardAndZeroFeet_whenCompare_thenShouldBeEqual()
+//    {
+//        Length zeroYard = new Length(0,Length.Unit.yard);
+//        Length zeroFeet = new Length(0,Length.Unit.feet);
+//
+//        assertTrue(zeroYard.equals(zeroFeet));
+//    }
 
-        assertTrue(zeroYard.equals(zeroYard));
-    }
-
-    @Test
-    public void givenOneYard_whenCompareYard_thenShouldBeEqual()
-    {
-        Length oneYard = new Length(1,Length.Unit.yard);
-
-        assertTrue(oneYard.equals(oneYard));
-    }
-
-    @Test
-    public void givenFirstYardAsOneAndSecondYardAsTwo_whenCompareYard_thenShouldNotBeEqual()
-    {
-        Length firstYard = new Length(1,Length.Unit.yard);
-        Length secondYard = new Length(2,Length.Unit.yard);
-
-        assertFalse(firstYard.equals(secondYard));
-    }
-
-    @Test
-    public void givenOneYardAndObject_whenCompareYard_thenShouldNotBeEqual()
-    {
-        Length oneYard = new Length(1,Length.Unit.yard);
-
-        assertFalse(oneYard.equals(new Object()));
-    }
-
-    @Test
-    public void givenOneYardAndANull_whenCompareYard_thenShouldNotBeEqual()
-    {
-        Length oneYard = new Length(1,Length.Unit.yard);
-
-        assertFalse(oneYard.equals(null));
-    }
-
-    @Test
-    public void givenOneYardAndOneFeet_whenCompareUnits_thenShouldNotBeEqual()
-    {
-        Length oneYard = new Length(1,Length.Unit.yard);
-        Length oneFeet = new Length(1,Length.Unit.feet);
-
-        assertFalse(oneYard.equals(oneFeet));
-    }
-
-    @Test
-    public void givenZeroYardAndZeroFeet_whenCompare_thenShouldBeEqual()
-    {
-        Length zeroYard = new Length(0,Length.Unit.yard);
-        Length zeroFeet = new Length(0,Length.Unit.feet);
-
-        assertTrue(zeroYard.equals(zeroFeet));
-    }
-
-
+//    @Test
+//    public void givenOneYardAndThreeFeet_whenCompare_thenShouldBeEqual()
+//    {
+//        Length oneYard = new Length(1,Length.Unit.yard);
+//        Length threeFeet = new Length(3,Length.Unit.feet);
+//
+//        assertTrue(oneYard.equals(threeFeet));
+//    }
 }
