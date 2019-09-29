@@ -31,7 +31,7 @@ public class LengthTest
         Length firstLength = new Length(1,Length.Unit.inch);
         Length secondLength = new Length(2,Length.Unit.inch);
 
-        assertFalse(firstLength.equals(secondLength));
+        assertFalse( firstLength.equals(secondLength) );
     }
 
     @Test
@@ -50,6 +50,7 @@ public class LengthTest
         assertFalse(zeroLength.equals(null));
     }
 
+    //////////
     @Test
     public void givenFeetAsZero_whenCompareFeet_thenShouldBeEqual() {
         Length zeroFeet = new Length(0,Length.Unit.feet);
@@ -127,10 +128,28 @@ public class LengthTest
     }
 
     @Test
-    public void givenFeetAsTwelveAndInchAsOne_whenCompareBoth_thenShouldBeTrue() {
+    public void givenInchAsTwelveAndFeetAsOne_whenCompareBoth_thenShouldBeTrue() {
         Length twelveInch = new Length(12,Length.Unit.inch);
         Length oneFeet = new Length(1,Length.Unit.feet);
 
         assertTrue(twelveInch.equals(oneFeet));
+    }
+
+    @Test
+    public void givenInchAsTwelveAndInchAsTwelve_whenCompareBoth_thenShouldBeTrue() {
+        Length twelveInch = new Length(12,Length.Unit.inch);
+        Length twentyfourInch = new Length(24,Length.Unit.inch);
+
+        assertFalse(twelveInch.equals(twentyfourInch));
+    }
+
+
+    /////////
+    @Test
+    public void givenZeroYard_whenCompareYard_thenShouldBeEqual()
+    {
+        Length zeroYard = new Length(0,Length.Unit.yard);
+
+        assertTrue(zeroYard.equals(zeroYard));
     }
 }
