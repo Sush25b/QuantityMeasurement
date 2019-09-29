@@ -160,4 +160,29 @@ public class LengthTest
 
         assertTrue(oneYard.equals(oneYard));
     }
+
+    @Test
+    public void givenFirstYardAsOneAndSecondYardAsTwo_whenCompareYard_thenShouldNotBeEqual()
+    {
+        Length firstYard = new Length(1,Length.Unit.yard);
+        Length secondYard = new Length(2,Length.Unit.yard);
+
+        assertFalse(firstYard.equals(secondYard));
+    }
+
+    @Test
+    public void givenOneYardAndObject_whenCompareYard_thenShouldNotBeEqual()
+    {
+        Length oneYard = new Length(1,Length.Unit.yard);
+
+        assertFalse(oneYard.equals(new Object()));
+    }
+
+    @Test
+    public void givenOneYardAndANull_whenCompareYard_thenShouldNotBeEqual()
+    {
+        Length oneYard = new Length(1,Length.Unit.yard);
+
+        assertFalse(oneYard.equals(null));
+    }
 }

@@ -6,7 +6,7 @@ public class Length {
     private Unit unit;
 
     enum Unit {
-        feet, inch,yard;
+        feet, inch, yard;
 
         public double convertToBaseInch(Length length)
         {
