@@ -194,4 +194,15 @@ public class LengthTest
 
         assertFalse(oneYard.equals(oneFeet));
     }
+
+    @Test
+    public void givenZeroYardAndZeroFeet_whenCompare_thenShouldBeEqual()
+    {
+        Length zeroYard = new Length(0,Length.Unit.yard);
+        Length zeroFeet = new Length(0,Length.Unit.feet);
+
+        assertTrue(zeroYard.equals(zeroFeet));
+    }
+
+
 }
