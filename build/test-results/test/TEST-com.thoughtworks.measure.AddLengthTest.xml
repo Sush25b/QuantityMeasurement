@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.thoughtworks.measure.AddLengthTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-09-29T04:28:59" hostname="Sushants-MacBook-Pro.local" time="0.005">
+<testsuite name="com.thoughtworks.measure.AddLengthTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-09-29T04:35:08" hostname="Sushants-MacBook-Pro.local" time="0.001">
   <properties/>
-  <testcase name="givenInchAsZero_whenAdded_thenShouldBeEqual" classname="com.thoughtworks.measure.AddLengthTest" time="0.005"/>
+  <testcase name="givenInchAsZero_whenAdded_thenShouldBeZero" classname="com.thoughtworks.measure.AddLengthTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -49,6 +49,15 @@ public class Length {
 
         return (this.unit.convertToBaseInch(this) == this.unit.convertToBaseInch(length));
     }
+
+    public boolean add(Object other)
+    {
+        if (this == other)               //2 other same address
+        {
+            return true;
+        }
+        return false;
+    }
 }
 
 
