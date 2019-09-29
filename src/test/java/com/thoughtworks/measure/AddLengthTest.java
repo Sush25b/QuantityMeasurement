@@ -2,6 +2,8 @@ package com.thoughtworks.measure;
 
 import org.junit.Test;
 
+
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class AddLengthTest
@@ -11,6 +13,7 @@ public class AddLengthTest
     {
         Length zeroInch = new Length(0,Length.Unit.inch);
 
-        assertTrue(zeroInch.add(zeroInch));
+        assertEquals(0.0,zeroInch.add(zeroInch),0.01);
     }
+
 }
