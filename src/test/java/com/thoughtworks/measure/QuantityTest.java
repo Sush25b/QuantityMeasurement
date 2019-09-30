@@ -10,8 +10,8 @@ public class QuantityTest
     @Test
     public void givenInchAsZero_whenCompareInch_thenShouldBeEqual()
     {
-        Quantity zeroQuantity = new Quantity(0, Quantity.Units.inch);
-        Quantity anotherZeroQuantity = new Quantity(0, Quantity.Units.inch);
+        Quantity zeroQuantity = new Quantity(0, Units.inch);
+        Quantity anotherZeroQuantity = new Quantity(0, Units.inch);
 
         assertEquals(zeroQuantity, anotherZeroQuantity);
     }
@@ -19,8 +19,8 @@ public class QuantityTest
     @Test
     public void givenInchAsOne_whenCompareInch_thenShouldBeEqual()
     {
-        Quantity oneQuantity = new Quantity(1, Quantity.Units.inch);
-        Quantity anotherOneQuantity = new Quantity(1, Quantity.Units.inch);
+        Quantity oneQuantity = new Quantity(1, Units.inch);
+        Quantity anotherOneQuantity = new Quantity(1, Units.inch);
 
         assertEquals(oneQuantity, anotherOneQuantity);
     }
@@ -28,8 +28,8 @@ public class QuantityTest
     @Test
     public void givenFirstInchAsOneAndSecondInchAsTwo_whenCompareFeet_thenShouldNotBeEqual()
     {
-        Quantity firstQuantity = new Quantity(1, Quantity.Units.inch);
-        Quantity secondQuantity = new Quantity(2, Quantity.Units.inch);
+        Quantity firstQuantity = new Quantity(1, Units.inch);
+        Quantity secondQuantity = new Quantity(2, Units.inch);
 
         assertFalse( firstQuantity.equals(secondQuantity) );
     }
@@ -37,7 +37,7 @@ public class QuantityTest
     @Test
     public void givenInchAsZeroAndObject_whenCompareInch_thenShouldNotBeEqual()
     {
-        Quantity zeroQuantity = new Quantity(0, Quantity.Units.inch);
+        Quantity zeroQuantity = new Quantity(0, Units.inch);
 
         assertFalse(zeroQuantity.equals(new Object()));
     }
@@ -45,7 +45,7 @@ public class QuantityTest
     @Test
     public void givenInchAsZeroAndNull_whenCompareInch_thenShouldNotBeEqual()
     {
-        Quantity zeroQuantity = new Quantity(0, Quantity.Units.inch);
+        Quantity zeroQuantity = new Quantity(0, Units.inch);
 
         assertFalse(zeroQuantity.equals(null));
     }
@@ -53,38 +53,38 @@ public class QuantityTest
     //////////
     @Test
     public void givenFeetAsZero_whenCompareFeet_thenShouldBeEqual() {
-        Quantity zeroFeet = new Quantity(0, Quantity.Units.feet);
-        Quantity anotherZeroFeet = new Quantity(0, Quantity.Units.feet);
+        Quantity zeroFeet = new Quantity(0, Units.feet);
+        Quantity anotherZeroFeet = new Quantity(0, Units.feet);
 
         assertEquals(zeroFeet, anotherZeroFeet);
     }
 
     @Test
     public void givenFeetAsOne_whenCompareFeet_thenShouldBeEqual() {
-        Quantity oneFeet = new Quantity(1, Quantity.Units.feet);
-        Quantity anotherOneFeet = new Quantity(1, Quantity.Units.feet);
+        Quantity oneFeet = new Quantity(1, Units.feet);
+        Quantity anotherOneFeet = new Quantity(1, Units.feet);
 
         assertEquals(oneFeet, anotherOneFeet);
     }
 
     @Test
     public void givenFirstFeetValueAsOneAndSecondFeetValueAsTwo_whenCompareFeet_thenShouldNotBeEqual() {
-        Quantity firstFeet = new Quantity(1, Quantity.Units.feet);
-        Quantity secondFeet = new Quantity(2, Quantity.Units.feet);
+        Quantity firstFeet = new Quantity(1, Units.feet);
+        Quantity secondFeet = new Quantity(2, Units.feet);
 
         assertFalse(firstFeet.equals(secondFeet));
     }
 
     @Test
     public void givenFeetAsOneAndAObject_whenCompareFeet_thenShouldNoteBeEqual() {
-        Quantity zeroFeet = new Quantity(0, Quantity.Units.feet);
+        Quantity zeroFeet = new Quantity(0, Units.feet);
 
         assertFalse(zeroFeet.equals(new Object()));
     }
 
     @Test
     public void givenFeetAsOneAndNull_whenCompareFeet_thenShouldNoteBeEqual() {
-        Quantity zeroFeet = new Quantity(0, Quantity.Units.feet);
+        Quantity zeroFeet = new Quantity(0, Units.feet);
 
         assertFalse(zeroFeet.equals(null));
     }
@@ -92,53 +92,53 @@ public class QuantityTest
     //Compare feet and inch unit
     @Test
     public void givenFeetAsOneAndInchAsZero_whenCompareBothUnit_thenShouldNoteBeEqual() {
-        Quantity oneFeet = new Quantity(1, Quantity.Units.feet);
-        Quantity zeroInch = new Quantity(0, Quantity.Units.inch);
+        Quantity oneFeet = new Quantity(1, Units.feet);
+        Quantity zeroInch = new Quantity(0, Units.inch);
         assertFalse(oneFeet.equals(zeroInch));
     }
 
     @Test
     public void givenFeetAsZeroAndInchAsZero_whenCompareBoth_thenShouldBeEqual() {
-        Quantity oneFeet = new Quantity(0, Quantity.Units.feet);
-        Quantity oneInch = new Quantity(0, Quantity.Units.inch);
+        Quantity oneFeet = new Quantity(0, Units.feet);
+        Quantity oneInch = new Quantity(0, Units.inch);
 
         assertTrue(oneFeet.equals(oneInch));
     }
     @Test
-    public void givenFeetAsOneAndInchAsTwelve_whenCompareBoth_thenShouldBeTrue() {
-        Quantity oneFeet = new Quantity(1, Quantity.Units.feet);
-        Quantity twelveInch = new Quantity(12, Quantity.Units.inch);
+    public void givenFeetAsOneAndInchAsTwelve_whenCompareBoth_thenShouldBeTrue() {      //
+        Quantity oneFeet = new Quantity(1, Units.feet);
+        Quantity twelveInch = new Quantity(12, Units.inch);
 
         assertTrue(oneFeet.equals(twelveInch));
     }
 
     @Test
-    public void givenFeetAsTwoAndInchAsTwentyFour_whenCompareBoth_thenShouldBeTrue() {
-        Quantity twoFeet = new Quantity(2, Quantity.Units.feet);
-        Quantity twentyFourInch = new Quantity(24, Quantity.Units.inch);
+    public void givenFeetAsTwoAndInchAsTwentyFour_whenCompareBoth_thenShouldBeTrue() {   //
+        Quantity twoFeet = new Quantity(2, Units.feet);
+        Quantity twentyFourInch = new Quantity(24, Units.inch);
 
         assertTrue(twoFeet.equals(twentyFourInch));
     }
     @Test
-    public void givenFeetAsThreeAndInchAsThirtySix_whenCompareBoth_thenShouldBeTrue() {
-        Quantity threeFeet = new Quantity(3, Quantity.Units.feet);
-        Quantity thirtSixInch = new Quantity(36, Quantity.Units.inch);
+    public void givenFeetAsThreeAndInchAsThirtySix_whenCompareBoth_thenShouldBeTrue() {    //
+        Quantity threeFeet = new Quantity(3, Units.feet);
+        Quantity thirtSixInch = new Quantity(36, Units.inch);
 
         assertTrue(threeFeet.equals(thirtSixInch));
     }
 
     @Test
-    public void givenInchAsTwelveAndFeetAsOne_whenCompareBoth_thenShouldBeTrue() {
-        Quantity twelveInch = new Quantity(12, Quantity.Units.inch);
-        Quantity oneFeet = new Quantity(1, Quantity.Units.feet);
+    public void givenInchAsTwelveAndFeetAsOne_whenCompareBoth_thenShouldBeTrue() {       //
+        Quantity twelveInch = new Quantity(12, Units.inch);
+        Quantity oneFeet = new Quantity(1, Units.feet);
 
         assertTrue(twelveInch.equals(oneFeet));
     }
 
     @Test
     public void givenInchAsTwelveAndInchAsTwelve_whenCompareBoth_thenShouldBeTrue() {
-        Quantity twelveInch = new Quantity(12, Quantity.Units.inch);
-        Quantity twentyfourInch = new Quantity(24, Quantity.Units.inch);
+        Quantity twelveInch = new Quantity(12, Units.inch);
+        Quantity twentyfourInch = new Quantity(24, Units.inch);
 
         assertFalse(twelveInch.equals(twentyfourInch));
     }

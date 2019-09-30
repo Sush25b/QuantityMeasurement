@@ -1,30 +1,9 @@
 package com.thoughtworks.measure;
 
-import java.util.Arrays;
-import java.util.EnumSet;
-import java.util.List;
-
 public class Quantity {
 
-    private final double value;
-    private Units unit;
-
-    enum Units {
-
-        feet(12.0), inch(1.0), gallon(3.78), liters(1.0);
-        private double converter;
-        static List<Units> lengthUnits = Arrays.asList(feet, inch);
-        static List<Units> volumeUnits = Arrays.asList(liters,gallon);
-
-        Units(double converter) {
-            this.converter = converter;
-        }
-
-        public double convertToBaseInch(Quantity quantity) {
-            return quantity.value * quantity.unit.converter;
-        }
-
-    }
+    protected final double value;
+    protected Units unit; // TODO
 
     public Quantity(double value, Units unit) {
         this.value = value;
@@ -33,26 +12,24 @@ public class Quantity {
 
     @Override
     public boolean equals(Object other) {
-        if (this == other)               //2 other same address
-        {
+        if (this == other) {
             return true;
         }
 
-        if (!(other instanceof Quantity)) //instance
-        {
+        if (!(other instanceof Quantity)) {
             return false;
         }
 
         Quantity quantity = (Quantity) other;
 
-        return (this.unit.convertToBaseInch(this) == this.unit.convertToBaseInch(quantity));
+        return (this.unit.convertToBase(this) == this.unit.convertToBase(quantity));
     }
 
     public Quantity add(Object other) {
         Quantity otherQuantity = (Quantity) other;
 
-        double meInBase = this.unit.convertToBaseInch(this);
-        double otherInBase = otherQuantity.unit.convertToBaseInch(otherQuantity);
+        double meInBase = this.unit.convertToBase(this);
+        double otherInBase = otherQuantity.unit.convertToBase(otherQuantity);
 
         if (otherQuantity.unit == Units.inch) {
             return new Quantity(meInBase + otherInBase, Units.inch);
@@ -62,7 +39,8 @@ public class Quantity {
             return new Quantity(Math.round((meInBase + otherInBase) * 100.0) / 100.0, Units.liters);
         }
 
-        if ( Units.lengthUnits.contains(this.unit) == Units.volumeUnits.contains(otherQuantity.unit)) {
+        // if ( Units.lengthUnits.contains(this.unit) == Units.volumeUnits.contains(otherQuantity.unit)) {
+        if (this.unit.group.name() != otherQuantity.unit.group.name()) {
             throw new ArithmeticException("not valid");
         }
 
@@ -77,17 +55,6 @@ public class Quantity {
                 '}';
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 //        if( !(this.unit==length.unit) && this.value== length.value) //0 0  unitdiff  //10
