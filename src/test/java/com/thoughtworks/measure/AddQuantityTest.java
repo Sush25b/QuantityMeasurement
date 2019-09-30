@@ -43,7 +43,7 @@ public class AddQuantityTest {
     public void givenOneGallon_whenCompare_thenShouldBeTrue() {
         Quantity oneGallon = new Quantity(1.0, Quantity.Units.gallon);
 
-        assertTrue(oneGallon.equals(oneGallon));
+        assertEquals(oneGallon, oneGallon);
     }
 
     @Test
@@ -59,6 +59,6 @@ public class AddQuantityTest {
         Quantity oneGallon = new Quantity(1.0, Quantity.Units.gallon);
         Quantity oneFeet = new Quantity(1.0, Quantity.Units.feet);
 
-        assertEquals(new Quantity(4.75, Quantity.Units.liters), oneGallon.add(oneFeet));
+        assertEquals(new Quantity(4.78, Quantity.Units.liters),oneGallon.add(oneFeet));
     }
 }

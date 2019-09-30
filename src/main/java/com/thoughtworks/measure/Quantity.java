@@ -1,6 +1,7 @@
 package com.thoughtworks.measure;
 
 import java.util.Arrays;
+import java.util.EnumSet;
 import java.util.List;
 
 public class Quantity {
@@ -9,9 +10,11 @@ public class Quantity {
     private Units unit;
 
     enum Units {
-        feet(12.0), inch(1.0), gallon(3.78), liters(1.0);
 
+        feet(12.0), inch(1.0), gallon(3.78), liters(1.0);
         private double converter;
+        static List<Units> lengthUnits = Arrays.asList(feet, inch);
+        static List<Units> volumeUnits = Arrays.asList(liters,gallon);
 
         Units(double converter) {
             this.converter = converter;
@@ -45,28 +48,21 @@ public class Quantity {
         return (this.unit.convertToBaseInch(this) == this.unit.convertToBaseInch(quantity));
     }
 
-    public Quantity add(Object other)
-    {
+    public Quantity add(Object other) {
         Quantity otherQuantity = (Quantity) other;
 
-        List<Units> lengthUnits = Arrays.asList(Units.feet,Units.inch);
-        List<Units> volumeUnits= Arrays.asList(Units.liters,Units.gallon);
+        double meInBase = this.unit.convertToBaseInch(this);
+        double otherInBase = otherQuantity.unit.convertToBaseInch(otherQuantity);
 
-        double meInBase= this.unit.convertToBaseInch(this);
-        double otherInBase= otherQuantity.unit.convertToBaseInch(otherQuantity);
-
-        if(otherQuantity.unit==Units.inch)
-        {
-           return new Quantity( meInBase + otherInBase, Units.inch);
+        if (otherQuantity.unit == Units.inch) {
+            return new Quantity(meInBase + otherInBase, Units.inch);
         }
 
-        if( otherQuantity.unit==Units.liters )
-        {
-            return new Quantity(Math.round(( meInBase + otherInBase) * 100.0) / 100.0, Units.liters);
+        if (otherQuantity.unit == Units.liters) {
+            return new Quantity(Math.round((meInBase + otherInBase) * 100.0) / 100.0, Units.liters);
         }
 
-        if(lengthUnits.contains(this.unit) == volumeUnits.contains(otherQuantity.unit))
-        {
+        if ( Units.lengthUnits.contains(this.unit) == Units.volumeUnits.contains(otherQuantity.unit)) {
             throw new ArithmeticException("not valid");
         }
 
@@ -81,6 +77,12 @@ public class Quantity {
                 '}';
     }
 }
+
+
+
+
+
+
 
 
 
