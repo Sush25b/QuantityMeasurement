@@ -22,11 +22,15 @@ public class Quantity {
 
         Quantity otherQuantity = (Quantity) other;
 
-        if (this.unit.group.name() != otherQuantity.unit.group.name()) {
+        if (unitMatcher(otherQuantity)) {
             return false;
         }
 
         return (this.unit.convertToBase(this) == this.unit.convertToBase(otherQuantity));
+    }
+
+    private boolean unitMatcher(Quantity otherQuantity) {
+        return !this.unit.measurement.equals(otherQuantity.unit.measurement);
     }
 
     public Quantity add(Object other) {
@@ -44,8 +48,8 @@ public class Quantity {
         }
 
         // if ( Units.lengthUnits.contains(this.unit) == Units.volumeUnits.contains(otherQuantity.unit)) {
-        if (this.unit.group.name() != otherQuantity.unit.group.name()) {
-            throw new ArithmeticException("not valid");
+        if (unitMatcher(otherQuantity)) {
+            throw new ArithmeticException("not valid units for conversion");
         }
 
         return new Quantity(0.0, Units.inch);
@@ -59,48 +63,3 @@ public class Quantity {
                 '}';
     }
 }
-
-
-
-
-
-
-
-//        if( !(this.unit==length.unit) && this.value== length.value) //0 0  unitdiff  //10
-//        {
-//            return true;
-//        }
-
-
-//
-//if( !(this.unit==length.unit) && this.value== length.value)
-//        {
-//        return true;
-//        }
-//
-//        return this.unit==length.unit && this.value== length.value;
-
-
-//-----
-//Length length = (Length) object;
-//    if (this.unit == Unit.feet && !(this.unit == length.unit)) {
-//            int FFET_TO_INCH = this.value * 12;                     //12 1
-//            return (length.value == FFET_TO_INCH);
-//            }
-//
-//            if (this.unit == Unit.inch && !(this.unit == length.unit)) {
-//            int INCH_TO_FEET = this.value / 12;                     //12 1
-//            return (length.value == INCH_TO_FEET);
-//            }
-
-
-//      feet, inch, gallon, liters
-//        public double convertToBaseInch(Quantity quantity) {
-//            if (quantity.unit == feet) {
-//                return quantity.value * 12.0;
-//            }
-//            if (quantity.unit == gallon) {
-//                return quantity.value * 3.78;
-//            }
-//            return quantity.value;
-//        }

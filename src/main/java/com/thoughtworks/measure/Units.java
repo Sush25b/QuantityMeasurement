@@ -1,20 +1,17 @@
 package com.thoughtworks.measure;
 
  public enum Units {
-    feet(12.0, Group.length), inch(1.0, Group.length), gallon(3.78, Group.volume), liters(1.0, Group.volume);
+    feet(12.0, Measurement.length), inch(1.0, Measurement.length), gallon(3.78, Measurement.volume), liters(1.0, Measurement.volume);
 
     private double converter;
-    protected Group group;
+    protected Measurement measurement;
 
-//        static List<Units> lengthUnits = Arrays.asList(feet, inch);
-//        static List<Units> volumeUnits = Arrays.asList(liters,gallon);
-
-    Units(double converter, Group group) {
+    Units(double converter, Measurement measurement) {
         this.converter = converter;
-        this.group = group;
+        this.measurement = measurement;
     }
 
-     enum Group {
+     enum Measurement {
         length, volume
     }
 
