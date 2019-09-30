@@ -4,87 +4,87 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class LengthTest
+public class QuantityTest
 {
 
     @Test
     public void givenInchAsZero_whenCompareInch_thenShouldBeEqual()
     {
-        Length zeroLength = new Length(0,Length.Unit.inch);
-        Length anotherZeroLength = new Length(0,Length.Unit.inch);
+        Quantity zeroQuantity = new Quantity(0, Quantity.Units.inch);
+        Quantity anotherZeroQuantity = new Quantity(0, Quantity.Units.inch);
 
-        assertEquals(zeroLength, anotherZeroLength);
+        assertEquals(zeroQuantity, anotherZeroQuantity);
     }
 
     @Test
     public void givenInchAsOne_whenCompareInch_thenShouldBeEqual()
     {
-        Length oneLength = new Length(1,Length.Unit.inch);
-        Length anotherOneLength = new Length(1,Length.Unit.inch);
+        Quantity oneQuantity = new Quantity(1, Quantity.Units.inch);
+        Quantity anotherOneQuantity = new Quantity(1, Quantity.Units.inch);
 
-        assertEquals(oneLength, anotherOneLength);
+        assertEquals(oneQuantity, anotherOneQuantity);
     }
 
     @Test
     public void givenFirstInchAsOneAndSecondInchAsTwo_whenCompareFeet_thenShouldNotBeEqual()
     {
-        Length firstLength = new Length(1,Length.Unit.inch);
-        Length secondLength = new Length(2,Length.Unit.inch);
+        Quantity firstQuantity = new Quantity(1, Quantity.Units.inch);
+        Quantity secondQuantity = new Quantity(2, Quantity.Units.inch);
 
-        assertFalse( firstLength.equals(secondLength) );
+        assertFalse( firstQuantity.equals(secondQuantity) );
     }
 
     @Test
     public void givenInchAsZeroAndObject_whenCompareInch_thenShouldNotBeEqual()
     {
-        Length zeroLength = new Length(0,Length.Unit.inch);
+        Quantity zeroQuantity = new Quantity(0, Quantity.Units.inch);
 
-        assertFalse(zeroLength.equals(new Object()));
+        assertFalse(zeroQuantity.equals(new Object()));
     }
 
     @Test
     public void givenInchAsZeroAndNull_whenCompareInch_thenShouldNotBeEqual()
     {
-        Length zeroLength = new Length(0,Length.Unit.inch);
+        Quantity zeroQuantity = new Quantity(0, Quantity.Units.inch);
 
-        assertFalse(zeroLength.equals(null));
+        assertFalse(zeroQuantity.equals(null));
     }
 
     //////////
     @Test
     public void givenFeetAsZero_whenCompareFeet_thenShouldBeEqual() {
-        Length zeroFeet = new Length(0,Length.Unit.feet);
-        Length anotherZeroFeet = new Length(0,Length.Unit.feet);
+        Quantity zeroFeet = new Quantity(0, Quantity.Units.feet);
+        Quantity anotherZeroFeet = new Quantity(0, Quantity.Units.feet);
 
         assertEquals(zeroFeet, anotherZeroFeet);
     }
 
     @Test
     public void givenFeetAsOne_whenCompareFeet_thenShouldBeEqual() {
-        Length oneFeet = new Length(1,Length.Unit.feet);
-        Length anotherOneFeet = new Length(1,Length.Unit.feet);
+        Quantity oneFeet = new Quantity(1, Quantity.Units.feet);
+        Quantity anotherOneFeet = new Quantity(1, Quantity.Units.feet);
 
         assertEquals(oneFeet, anotherOneFeet);
     }
 
     @Test
     public void givenFirstFeetValueAsOneAndSecondFeetValueAsTwo_whenCompareFeet_thenShouldNotBeEqual() {
-        Length firstFeet = new Length(1,Length.Unit.feet);
-        Length secondFeet = new Length(2,Length.Unit.feet);
+        Quantity firstFeet = new Quantity(1, Quantity.Units.feet);
+        Quantity secondFeet = new Quantity(2, Quantity.Units.feet);
 
         assertFalse(firstFeet.equals(secondFeet));
     }
 
     @Test
     public void givenFeetAsOneAndAObject_whenCompareFeet_thenShouldNoteBeEqual() {
-        Length zeroFeet = new Length(0,Length.Unit.feet);
+        Quantity zeroFeet = new Quantity(0, Quantity.Units.feet);
 
         assertFalse(zeroFeet.equals(new Object()));
     }
 
     @Test
     public void givenFeetAsOneAndNull_whenCompareFeet_thenShouldNoteBeEqual() {
-        Length zeroFeet = new Length(0,Length.Unit.feet);
+        Quantity zeroFeet = new Quantity(0, Quantity.Units.feet);
 
         assertFalse(zeroFeet.equals(null));
     }
@@ -92,53 +92,53 @@ public class LengthTest
     //Compare feet and inch unit
     @Test
     public void givenFeetAsOneAndInchAsZero_whenCompareBothUnit_thenShouldNoteBeEqual() {
-        Length oneFeet = new Length(1,Length.Unit.feet);
-        Length zeroInch = new Length(0,Length.Unit.inch);
+        Quantity oneFeet = new Quantity(1, Quantity.Units.feet);
+        Quantity zeroInch = new Quantity(0, Quantity.Units.inch);
         assertFalse(oneFeet.equals(zeroInch));
     }
 
     @Test
     public void givenFeetAsZeroAndInchAsZero_whenCompareBoth_thenShouldBeEqual() {
-        Length oneFeet = new Length(0,Length.Unit.feet);
-        Length oneInch = new Length(0,Length.Unit.inch);
+        Quantity oneFeet = new Quantity(0, Quantity.Units.feet);
+        Quantity oneInch = new Quantity(0, Quantity.Units.inch);
 
         assertTrue(oneFeet.equals(oneInch));
     }
     @Test
     public void givenFeetAsOneAndInchAsTwelve_whenCompareBoth_thenShouldBeTrue() {
-        Length oneFeet = new Length(1,Length.Unit.feet);
-        Length twelveInch = new Length(12,Length.Unit.inch);
+        Quantity oneFeet = new Quantity(1, Quantity.Units.feet);
+        Quantity twelveInch = new Quantity(12, Quantity.Units.inch);
 
         assertTrue(oneFeet.equals(twelveInch));
     }
 
     @Test
     public void givenFeetAsTwoAndInchAsTwentyFour_whenCompareBoth_thenShouldBeTrue() {
-        Length twoFeet = new Length(2,Length.Unit.feet);
-        Length twentyFourInch = new Length(24,Length.Unit.inch);
+        Quantity twoFeet = new Quantity(2, Quantity.Units.feet);
+        Quantity twentyFourInch = new Quantity(24, Quantity.Units.inch);
 
         assertTrue(twoFeet.equals(twentyFourInch));
     }
     @Test
     public void givenFeetAsThreeAndInchAsThirtySix_whenCompareBoth_thenShouldBeTrue() {
-        Length threeFeet = new Length(3,Length.Unit.feet);
-        Length thirtSixInch = new Length(36,Length.Unit.inch);
+        Quantity threeFeet = new Quantity(3, Quantity.Units.feet);
+        Quantity thirtSixInch = new Quantity(36, Quantity.Units.inch);
 
         assertTrue(threeFeet.equals(thirtSixInch));
     }
 
     @Test
     public void givenInchAsTwelveAndFeetAsOne_whenCompareBoth_thenShouldBeTrue() {
-        Length twelveInch = new Length(12,Length.Unit.inch);
-        Length oneFeet = new Length(1,Length.Unit.feet);
+        Quantity twelveInch = new Quantity(12, Quantity.Units.inch);
+        Quantity oneFeet = new Quantity(1, Quantity.Units.feet);
 
         assertTrue(twelveInch.equals(oneFeet));
     }
 
     @Test
     public void givenInchAsTwelveAndInchAsTwelve_whenCompareBoth_thenShouldBeTrue() {
-        Length twelveInch = new Length(12,Length.Unit.inch);
-        Length twentyfourInch = new Length(24,Length.Unit.inch);
+        Quantity twelveInch = new Quantity(12, Quantity.Units.inch);
+        Quantity twentyfourInch = new Quantity(24, Quantity.Units.inch);
 
         assertFalse(twelveInch.equals(twentyfourInch));
     }
