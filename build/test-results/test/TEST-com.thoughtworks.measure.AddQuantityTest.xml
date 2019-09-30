@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.thoughtworks.measure.AddQuantityTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-09-30T05:32:24" hostname="Sushants-MacBook-Pro.local" time="0.003">
+<testsuite name="com.thoughtworks.measure.AddQuantityTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-09-30T05:48:39" hostname="Sushants-MacBook-Pro.local" time="0.002">
   <properties/>
   <testcase name="givenOneGallon_whenCompare_thenShouldBeTrue" classname="com.thoughtworks.measure.AddQuantityTest" time="0.001"/>
   <testcase name="givenOneFeetAndTwoInch_whenAdded_thenShouldBeFourteenInches" classname="com.thoughtworks.measure.AddQuantityTest" time="0.0"/>

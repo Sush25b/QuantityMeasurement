@@ -48,24 +48,29 @@ public class Quantity {
     public Quantity add(Object other)
     {
         Quantity otherQuantity = (Quantity) other;
+
         List<Units> lengthUnits = Arrays.asList(Units.feet,Units.inch);
         List<Units> volumeUnits= Arrays.asList(Units.liters,Units.gallon);
 
+        double meInBase= this.unit.convertToBaseInch(this);
+        double otherInBase= otherQuantity.unit.convertToBaseInch(otherQuantity);
+
         if(otherQuantity.unit==Units.inch)
         {
-           return new Quantity(this.unit.convertToBaseInch(this) + otherQuantity.unit.convertToBaseInch(otherQuantity), unit.inch);
+           return new Quantity( meInBase + otherInBase, Units.inch);
         }
 
         if( otherQuantity.unit==Units.liters )
         {
-            return new Quantity(Math.round((this.unit.convertToBaseInch(this) + otherQuantity.unit.convertToBaseInch(otherQuantity)) * 100.0) / 100.0, unit.liters);
+            return new Quantity(Math.round(( meInBase + otherInBase) * 100.0) / 100.0, Units.liters);
         }
 
-        if(lengthUnits.contains(this.unit) == volumeUnits.contains(otherQuantity.unit)) {
+        if(lengthUnits.contains(this.unit) == volumeUnits.contains(otherQuantity.unit))
+        {
             throw new ArithmeticException("not valid");
         }
 
-        return new Quantity(0.0,unit.inch);
+        return new Quantity(0.0, Units.inch);
     }
 
     @Override
