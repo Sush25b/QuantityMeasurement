@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.thoughtworks.measure.QuantityTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2019-09-30T09:36:53" hostname="Sushants-MacBook-Pro.local" time="0.004">
+<testsuite name="com.thoughtworks.measure.QuantityTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2019-09-30T10:43:17" hostname="Sushants-MacBook-Pro.local" time="0.003">
   <properties/>
   <testcase name="givenFeetAsZeroAndInchAsZero_whenCompareBoth_thenShouldBeEqual" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
   <testcase name="givenFeetAsOneAndInchAsTwelve_whenCompareBoth_thenShouldBeTrue" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
@@ -8,7 +8,7 @@
   <testcase name="givenFeetAsTwoAndInchAsTwentyFour_whenCompareBoth_thenShouldBeTrue" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
   <testcase name="givenFeetAsOne_whenCompareFeet_thenShouldBeEqual" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
   <testcase name="givenFirstFeetValueAsOneAndSecondFeetValueAsTwo_whenCompareFeet_thenShouldNotBeEqual" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
-  <testcase name="givenInchAsTwelveAndFeetAsOne_whenCompareBoth_thenShouldBeTrue" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
+  <testcase name="givenInchAsTwelveAndFeetAsOne_whenCompareBoth_thenShouldBeTrue" classname="com.thoughtworks.measure.QuantityTest" time="0.001"/>
   <testcase name="givenInchAsZero_whenCompareInch_thenShouldBeEqual" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
   <testcase name="givenFirstInchAsOneAndSecondInchAsTwo_whenCompareFeet_thenShouldNotBeEqual" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
   <testcase name="givenInchAsZeroAndNull_whenCompareInch_thenShouldNotBeEqual" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>

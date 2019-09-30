@@ -3,7 +3,7 @@ package com.thoughtworks.measure;
 public class Quantity {
 
     protected final double value;
-    protected Units unit; // TODO
+    protected final Units unit;
 
     public Quantity(double value, Units unit) {
         this.value = value;
@@ -20,9 +20,13 @@ public class Quantity {
             return false;
         }
 
-        Quantity quantity = (Quantity) other;
+        Quantity otherQuantity = (Quantity) other;
 
-        return (this.unit.convertToBase(this) == this.unit.convertToBase(quantity));
+        if (this.unit.group.name() != otherQuantity.unit.group.name()) {
+            return false;
+        }
+
+        return (this.unit.convertToBase(this) == this.unit.convertToBase(otherQuantity));
     }
 
     public Quantity add(Object other) {
@@ -55,6 +59,11 @@ public class Quantity {
                 '}';
     }
 }
+
+
+
+
+
 
 
 //        if( !(this.unit==length.unit) && this.value== length.value) //0 0  unitdiff  //10

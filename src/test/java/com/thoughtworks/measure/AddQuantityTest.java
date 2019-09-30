@@ -1,7 +1,8 @@
 package com.thoughtworks.measure;
 
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+
+import static org.junit.Assert.*;
 
 public class AddQuantityTest {
     @Test
@@ -28,7 +29,7 @@ public class AddQuantityTest {
     }
 
     @Test
-    public void givenOneFeetAndTwoInch_whenAdded_thenShouldBeFourteenInches() {                                 //
+    public void givenOneFeetAndTwoInch_whenAdded_thenShouldBeFourteenInches() {
         Quantity oneFeet = new Quantity(1.0, Units.feet);
         Quantity twoInch = new Quantity(2.0, Units.inch);
 
@@ -44,7 +45,7 @@ public class AddQuantityTest {
     }
 
     @Test
-    public void givenOneGallonAndOneLiter_whenAdded_thenShouldBeFourPointSeventyEight() {               //
+    public void givenOneGallonAndOneLiter_whenAdded_thenShouldBeFourPointSeventyEight() {
         Quantity oneGallon = new Quantity(1.0, Units.gallon);
         Quantity oneLiter = new Quantity(1.0, Units.liters);
 
@@ -52,10 +53,18 @@ public class AddQuantityTest {
     }
 
     @Test(expected = ArithmeticException.class)
-    public void givenOneGallonAndOnefeet_whenAdded_thenThrowRunTimeException() {                        //
+    public void givenOneGallonAndOnefeet_whenAdded_thenThrowRunTimeException() {
         Quantity oneGallon = new Quantity(1.0, Units.gallon);
         Quantity oneFeet = new Quantity(1.0, Units.feet);
 
         assertEquals(new Quantity(4.78, Units.liters), oneGallon.add(oneFeet));
+    }
+
+    @Test
+    public void givenOneGallonAndOnefeet_checkUnits_thenShouldNotBeEquals() {
+        Quantity oneGallon = new Quantity(1.0, Units.gallon);
+        Quantity oneFeet = new Quantity(1.0, Units.feet);
+
+        assertFalse(oneGallon.equals(oneFeet));
     }
 }

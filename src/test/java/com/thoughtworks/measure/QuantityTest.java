@@ -105,7 +105,7 @@ public class QuantityTest
         assertTrue(oneFeet.equals(oneInch));
     }
     @Test
-    public void givenFeetAsOneAndInchAsTwelve_whenCompareBoth_thenShouldBeTrue() {      //
+    public void givenFeetAsOneAndInchAsTwelve_whenCompareBoth_thenShouldBeTrue() {
         Quantity oneFeet = new Quantity(1, Units.feet);
         Quantity twelveInch = new Quantity(12, Units.inch);
 
@@ -113,14 +113,14 @@ public class QuantityTest
     }
 
     @Test
-    public void givenFeetAsTwoAndInchAsTwentyFour_whenCompareBoth_thenShouldBeTrue() {   //
+    public void givenFeetAsTwoAndInchAsTwentyFour_whenCompareBoth_thenShouldBeTrue() {
         Quantity twoFeet = new Quantity(2, Units.feet);
         Quantity twentyFourInch = new Quantity(24, Units.inch);
 
         assertTrue(twoFeet.equals(twentyFourInch));
     }
     @Test
-    public void givenFeetAsThreeAndInchAsThirtySix_whenCompareBoth_thenShouldBeTrue() {    //
+    public void givenFeetAsThreeAndInchAsThirtySix_whenCompareBoth_thenShouldBeTrue() {
         Quantity threeFeet = new Quantity(3, Units.feet);
         Quantity thirtSixInch = new Quantity(36, Units.inch);
 
@@ -128,7 +128,7 @@ public class QuantityTest
     }
 
     @Test
-    public void givenInchAsTwelveAndFeetAsOne_whenCompareBoth_thenShouldBeTrue() {       //
+    public void givenInchAsTwelveAndFeetAsOne_whenCompareBoth_thenShouldBeTrue() {
         Quantity twelveInch = new Quantity(12, Units.inch);
         Quantity oneFeet = new Quantity(1, Units.feet);
 
