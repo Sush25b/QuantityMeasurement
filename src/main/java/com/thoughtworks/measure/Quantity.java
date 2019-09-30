@@ -21,7 +21,6 @@ public class Quantity {
         }
 
         Quantity otherQuantity = (Quantity) other;
-
         if (isNotSimilarMeasurement(otherQuantity)) {
             return false;
         }
@@ -39,20 +38,11 @@ public class Quantity {
         double meInBase = this.unit.convertToBase(this);
         double otherInBase = otherQuantity.unit.convertToBase(otherQuantity);
 
-        if (otherQuantity.unit == Units.inch) {
-            return new Quantity(meInBase + otherInBase, Units.inch);
-        }
-
-        if (otherQuantity.unit == Units.liters) {
-            return new Quantity(Math.round((meInBase + otherInBase) * 100.0) / 100.0, Units.liters);
-        }
-
-        // if ( Units.lengthUnits.contains(this.unit) == Units.volumeUnits.contains(otherQuantity.unit)) {
         if (isNotSimilarMeasurement(otherQuantity)) {
             throw new ArithmeticException("not valid units for conversion");
         }
 
-        return new Quantity(0.0, Units.inch);
+        return new Quantity(Math.round((meInBase + otherInBase) * 100.0) / 100.0, otherQuantity.unit);
     }
 
     @Override

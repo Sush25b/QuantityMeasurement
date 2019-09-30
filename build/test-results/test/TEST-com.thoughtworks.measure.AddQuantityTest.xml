@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.thoughtworks.measure.AddQuantityTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2019-09-30T11:14:25" hostname="Sushants-MacBook-Pro.local" time="0.002">
+<testsuite name="com.thoughtworks.measure.AddQuantityTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2019-09-30T11:30:29" hostname="Sushants-MacBook-Pro.local" time="0.003">
   <properties/>
-  <testcase name="givenOneGallon_whenCompare_thenShouldBeTrue" classname="com.thoughtworks.measure.AddQuantityTest" time="0.001"/>
+  <testcase name="givenOneGallon_whenCompare_thenShouldBeTrue" classname="com.thoughtworks.measure.AddQuantityTest" time="0.002"/>
   <testcase name="givenOneFeetAndTwoInch_whenAdded_thenShouldBeFourteenInches" classname="com.thoughtworks.measure.AddQuantityTest" time="0.0"/>
   <testcase name="givenFirstInchAsOneAndSecondInchAsTwo_whenAdded_thenShouldBeThreeInches" classname="com.thoughtworks.measure.AddQuantityTest" time="0.0"/>
-  <testcase name="givenInchAsZero_whenAdded_thenShouldBeZero" classname="com.thoughtworks.measure.AddQuantityTest" time="0.001"/>
+  <testcase name="givenInchAsZero_whenAdded_thenShouldBeZero" classname="com.thoughtworks.measure.AddQuantityTest" time="0.0"/>
   <testcase name="givenOneGallonAndOneLiter_whenAdded_thenShouldBeFourPointSeventyEight" classname="com.thoughtworks.measure.AddQuantityTest" time="0.0"/>
   <testcase name="givenOneGallonAndOnefeet_whenAdded_thenThrowRunTimeException" classname="com.thoughtworks.measure.AddQuantityTest" time="0.0"/>
   <testcase name="givenFirstInchAsTwoAndSecondInchAsTwo_whenAdded_thenShouldBeFourInches" classname="com.thoughtworks.measure.AddQuantityTest" time="0.0"/>
