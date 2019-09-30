@@ -22,14 +22,14 @@ public class Quantity {
 
         Quantity otherQuantity = (Quantity) other;
 
-        if (unitMatcher(otherQuantity)) {
+        if (isNotSimilarMeasurement(otherQuantity)) {
             return false;
         }
 
         return (this.unit.convertToBase(this) == this.unit.convertToBase(otherQuantity));
     }
 
-    private boolean unitMatcher(Quantity otherQuantity) {
+    private boolean isNotSimilarMeasurement(Quantity otherQuantity) {
         return !this.unit.measurement.equals(otherQuantity.unit.measurement);
     }
 
@@ -48,7 +48,7 @@ public class Quantity {
         }
 
         // if ( Units.lengthUnits.contains(this.unit) == Units.volumeUnits.contains(otherQuantity.unit)) {
-        if (unitMatcher(otherQuantity)) {
+        if (isNotSimilarMeasurement(otherQuantity)) {
             throw new ArithmeticException("not valid units for conversion");
         }
 
