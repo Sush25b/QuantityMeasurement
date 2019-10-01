@@ -2,12 +2,16 @@ package com.thoughtworks.measure;
 
 public class Quantity {
 
-    protected final double value;
-    protected final Units unit;
+    public final double value;
+    protected final IUnits unit;
 
-    public Quantity(double value, Units unit) {
+    public Quantity(double value, IUnits unit) {
         this.value = value;
         this.unit = unit;
+    }
+
+    private boolean isNotSimilarMeasurement(Quantity otherQuantity) {
+        return !this.unit.getMeasurement().equals(otherQuantity.unit.getMeasurement());
     }
 
     @Override
@@ -25,11 +29,7 @@ public class Quantity {
             return false;
         }
 
-        return (this.unit.convertToBase(this) == this.unit.convertToBase(otherQuantity));
-    }
-
-    private boolean isNotSimilarMeasurement(Quantity otherQuantity) {
-        return !this.unit.measurement.equals(otherQuantity.unit.measurement);
+        return (this.unit.convertToBase(this) == otherQuantity.unit.convertToBase(otherQuantity));
     }
 
     public Quantity add(Object other) {
@@ -39,7 +39,7 @@ public class Quantity {
         double otherInBase = otherQuantity.unit.convertToBase(otherQuantity);
 
         if (isNotSimilarMeasurement(otherQuantity)) {
-            throw new ArithmeticException("not valid units for conversion");
+            throw new ArithmeticException("not a valid units for conversion");
         }
 
         return new Quantity(Math.round((meInBase + otherInBase) * 100.0) / 100.0, otherQuantity.unit);
