@@ -1,5 +1,7 @@
 package com.thoughtworks.measure;
 
+import com.thoughtworks.measure.Temperature.Celsius;
+import com.thoughtworks.measure.Temperature.Fahrenheit;
 import com.thoughtworks.measure.length.Feet;
 import com.thoughtworks.measure.length.Inch;
 import com.thoughtworks.measure.volume.Gallon;
@@ -20,5 +22,9 @@ public class QuantityFactory
     public static Quantity getGramQuantity(double value){return  new Quantity(value, new Gram()); }
 
     public static Quantity getKilogramGramQuantity(double value){return  new Quantity(value, new Kilogram()); }
+
+    public static Quantity getCelsiusQuantity(double value){ return new Quantity(value, new Celsius()); }
+
+    public static Quantity getFahrenheitQuantity(double value){ return  new Quantity(value, new Fahrenheit());}
 
 }

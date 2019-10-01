@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.thoughtworks.measure.AddQuantityTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2019-10-01T10:31:54" hostname="Sushants-MacBook-Pro.local" time="0.006">
+<testsuite name="com.thoughtworks.measure.AddQuantityTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2019-10-01T11:17:21" hostname="Sushants-MacBook-Pro.local" time="0.008">
   <properties/>
-  <testcase name="givenOneGallon_whenCompare_thenShouldBeTrue" classname="com.thoughtworks.measure.AddQuantityTest" time="0.001"/>
-  <testcase name="givenFirstGramAsOneAndSecondGramAsTwo_whenAdded_thenShouldBeThreeGram" classname="com.thoughtworks.measure.AddQuantityTest" time="0.001"/>
-  <testcase name="givenOneFeetAndTwoInch_whenAdded_thenShouldBeFourteenInches" classname="com.thoughtworks.measure.AddQuantityTest" time="0.001"/>
+  <testcase name="givenOneGallon_whenCompare_thenShouldBeTrue" classname="com.thoughtworks.measure.AddQuantityTest" time="0.0"/>
+  <testcase name="givenFirstGramAsOneAndSecondGramAsTwo_whenAdded_thenShouldBeThreeGram" classname="com.thoughtworks.measure.AddQuantityTest" time="0.0"/>
+  <testcase name="givenOneFeetAndTwoInch_whenAdded_thenShouldBeFourteenInches" classname="com.thoughtworks.measure.AddQuantityTest" time="0.0"/>
   <testcase name="givenTwoInchAndOneFeet_whenAdded_thenShouldBeFourteenInches" classname="com.thoughtworks.measure.AddQuantityTest" time="0.0"/>
   <testcase name="givenFirstInchAsOneAndSecondInchAsTwo_whenAdded_thenShouldBeThreeInches" classname="com.thoughtworks.measure.AddQuantityTest" time="0.0"/>
-  <testcase name="givenOneKilogramAndOneGram_whenAdded_thenShouldOneThousandOneGram" classname="com.thoughtworks.measure.AddQuantityTest" time="0.0"/>
+  <testcase name="givenOneKilogramAndOneGram_whenAdded_thenShouldOneThousandOneGram" classname="com.thoughtworks.measure.AddQuantityTest" time="0.002"/>
   <testcase name="givenInchAsZero_whenAdded_thenShouldBeZero" classname="com.thoughtworks.measure.AddQuantityTest" time="0.001"/>
   <testcase name="givenOneGallonAndOneLiter_whenAdded_thenShouldBeFourPointSeventyEight" classname="com.thoughtworks.measure.AddQuantityTest" time="0.0"/>
   <testcase name="givenZeroGram_whenAdded_thenShouldBeZero" classname="com.thoughtworks.measure.AddQuantityTest" time="0.0"/>

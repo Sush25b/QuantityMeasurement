@@ -13,7 +13,8 @@ public class Feet implements IUnit
     }
 
     @Override
-    public double convertToBase(double value) {
+    public double convertToBase(double value)
+    {
         return value*converter;
     }
 }

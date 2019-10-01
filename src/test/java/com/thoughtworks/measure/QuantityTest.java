@@ -157,4 +157,19 @@ public class QuantityTest {
         assertFalse(firstQuantity.equals(secondQuantity));
     }
 
+    @Test
+    public void givenCelsiusAsZero_whenCompareCelsius_thenShouldBeEqual() {
+        Quantity zeroQuantity = QuantityFactory.getCelsiusQuantity(0.0);
+        Quantity anotherZeroQuantity = QuantityFactory.getCelsiusQuantity(0.0);
+
+        assertEquals(zeroQuantity, anotherZeroQuantity);
+    }
+
+    @Test
+    public void givenOneCelsiusAndThrityThreePointEightFahrenheit_whenCompare_thenShouldBeEqual() {
+        Quantity oneCelsius = QuantityFactory.getCelsiusQuantity(1.0);
+        Quantity oneFahrenheit = QuantityFactory.getFahrenheitQuantity(33.8);
+
+        assertTrue(oneCelsius.equals(oneFahrenheit));
+    }
 }
