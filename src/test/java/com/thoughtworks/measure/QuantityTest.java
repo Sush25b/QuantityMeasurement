@@ -168,8 +168,16 @@ public class QuantityTest {
     @Test
     public void givenOneCelsiusAndThrityThreePointEightFahrenheit_whenCompare_thenShouldBeEqual() {
         Quantity oneCelsius = QuantityFactory.getCelsiusQuantity(1.0);
-        Quantity oneFahrenheit = QuantityFactory.getFahrenheitQuantity(33.8);
+        Quantity thirtyThreePointEightFahrenheit = QuantityFactory.getFahrenheitQuantity(33.8);
 
-        assertTrue(oneCelsius.equals(oneFahrenheit));
+        assertTrue(oneCelsius.equals(thirtyThreePointEightFahrenheit));
+    }
+
+    @Test
+    public void givenThrityThreePointEightFahrenheitAndOneCelsius_whenCompare_thenShouldBeEqual() {
+        Quantity thirtyThreePointEightFahrenheit = QuantityFactory.getFahrenheitQuantity(33.8);
+        Quantity oneCelsius = QuantityFactory.getCelsiusQuantity(1.0);
+
+        assertTrue(thirtyThreePointEightFahrenheit.equals(oneCelsius));
     }
 }
