@@ -140,4 +140,21 @@ public class QuantityTest {
         assertFalse(twelveInch.equals(twentyfourInch));
     }
 
+
+    @Test
+    public void givenGramAsZero_whenCompareGram_thenShouldBeEqual() {
+        Quantity zeroQuantity = QuantityFactory.getGramQuantity(0.0);
+        Quantity anotherZeroQuantity = QuantityFactory.getGramQuantity(0.0);
+
+        assertEquals(zeroQuantity, anotherZeroQuantity);
+    }
+
+    @Test
+    public void givenFirstGramAsOneAndSecondGramAsTwo_whenCompareGram_thenShouldNotBeEqual() {
+        Quantity firstQuantity = QuantityFactory.getGramQuantity(1.0);
+        Quantity secondQuantity = QuantityFactory.getGramQuantity(2.0);
+
+        assertFalse(firstQuantity.equals(secondQuantity));
+    }
+
 }

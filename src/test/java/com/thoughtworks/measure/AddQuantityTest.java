@@ -3,6 +3,7 @@ package com.thoughtworks.measure;
 import com.thoughtworks.measure.length.Inch;
 import com.thoughtworks.measure.volume.Gallon;
 import com.thoughtworks.measure.volume.Liter;
+import com.thoughtworks.measure.weight.Gram;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -78,4 +79,37 @@ public class AddQuantityTest {
 
         assertFalse(oneGallon.equals(oneFeet));
     }
+
+
+    @Test
+    public void givenZeroGram_whenAdded_thenShouldBeZero() {
+        Quantity zeroGram = QuantityFactory.getGramQuantity(0.0);
+
+        assertEquals(new Quantity(0.0, new Gram()), zeroGram.add(zeroGram));
+    }
+
+    @Test
+    public void givenFirstGramAsOneAndSecondGramAsTwo_whenAdded_thenShouldBeThreeGram() {
+        Quantity firstGram = QuantityFactory.getGramQuantity(1.0);
+        Quantity secondGram = QuantityFactory.getGramQuantity(2.0);
+
+        assertEquals(new Quantity(3.0, new Gram()), firstGram.add(secondGram));
+    }
+
+    @Test
+    public void givenOneGramAndOneKilogram_whenAdded_thenShouldOneThousandOneGram() {
+        Quantity oneGram = QuantityFactory.getGramQuantity(1.0);
+        Quantity oneKilogram = QuantityFactory.getKilogramGramQuantity(1.0);
+
+        assertEquals(new Quantity(1001.0, new Gram()), oneGram.add(oneKilogram));
+    }
+
+    @Test
+    public void givenOneKilogramAndOneGram_whenAdded_thenShouldOneThousandOneGram() {
+        Quantity oneKilogram = QuantityFactory.getKilogramGramQuantity(1.0);
+        Quantity oneGram = QuantityFactory.getGramQuantity(1.0);
+
+        assertEquals(new Quantity(1001.0, new Gram()), oneKilogram.add(oneGram));
+    }
+
 }
