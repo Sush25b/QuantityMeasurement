@@ -17,26 +17,34 @@ public class AddQuantityTest {
 
     @Test
     public void givenFirstInchAsOneAndSecondInchAsTwo_whenAdded_thenShouldBeThreeInches() {
-        Quantity firstInch = QuantityFactory.getInchQuantity(1.0);// new Quantity(1.0, Units.inch);
-        Quantity secondInch = QuantityFactory.getInchQuantity(2.0);//new Quantity(2.0, Units.inch);
+        Quantity firstInch = QuantityFactory.getInchQuantity(1.0);
+        Quantity secondInch = QuantityFactory.getInchQuantity(2.0);
 
         assertEquals(new Quantity(3.0, new Inch()), firstInch.add(secondInch));
     }
 
     @Test
     public void givenFirstInchAsTwoAndSecondInchAsTwo_whenAdded_thenShouldBeFourInches() {
-        Quantity twoInch = QuantityFactory.getInchQuantity(2.0);//new Quantity(2.0, Units.inch);
-        Quantity anothertwoInch = QuantityFactory.getInchQuantity(2.0);//new Quantity(2.0, Units.inch);
+        Quantity twoInch = QuantityFactory.getInchQuantity(2.0);
+        Quantity anothertwoInch = QuantityFactory.getInchQuantity(2.0);
 
         assertEquals(new Quantity(4.0, new Inch()), twoInch.add(anothertwoInch));
     }
 
     @Test
     public void givenOneFeetAndTwoInch_whenAdded_thenShouldBeFourteenInches() {
-        Quantity oneFeet = QuantityFactory.getFeetQuantity(1.0);//new Quantity(1.0, Units.feet);
-        Quantity twoInch = QuantityFactory.getInchQuantity(2.0);//new Quantity(2.0, Units.inch);
+        Quantity oneFeet = QuantityFactory.getFeetQuantity(1.0);
+        Quantity twoInch = QuantityFactory.getInchQuantity(2.0);
 
         assertEquals(new Quantity(14.0, new Inch()), oneFeet.add(twoInch));
+    }
+
+    @Test
+    public void givenTwoInchAndOneFeet_whenAdded_thenShouldBeFourteenInches() {
+        Quantity twoInch = QuantityFactory.getInchQuantity(2.0);
+        Quantity oneFeet = QuantityFactory.getFeetQuantity(1.0);
+
+        assertEquals(new Quantity(14.0, new Inch()), twoInch.add(oneFeet));
     }
 
     ////////
@@ -49,24 +57,24 @@ public class AddQuantityTest {
 
     @Test
     public void givenOneGallonAndOneLiter_whenAdded_thenShouldBeFourPointSeventyEight() {
-        Quantity oneGallon = QuantityFactory.getGallonQuantity(1.0);//new Quantity(1.0, Units.gallon);
-        Quantity oneLiter = QuantityFactory.getLiterQuantity(1.0);//new Quantity(1.0, Units.liters);
+        Quantity oneGallon = QuantityFactory.getGallonQuantity(1.0);
+        Quantity oneLiter = QuantityFactory.getLiterQuantity(1.0);
 
         assertEquals(new Quantity(4.78, new Liter()), oneGallon.add(oneLiter));
     }
 
     @Test(expected = ArithmeticException.class)
     public void givenOneGallonAndOnefeet_whenAdded_thenThrowRunTimeException() {
-        Quantity oneGallon =  QuantityFactory.getGallonQuantity(1.0);//new Quantity(1.0, Units.gallon);
-        Quantity oneFeet = QuantityFactory.getFeetQuantity(1.0);//new Quantity(1.0, Units.feet);
+        Quantity oneGallon =  QuantityFactory.getGallonQuantity(1.0);
+        Quantity oneFeet = QuantityFactory.getFeetQuantity(1.0);
 
         assertEquals(new Quantity(4.78, new Liter()), oneGallon.add(oneFeet));
     }
 
     @Test
     public void givenOneGallonAndOnefeet_checkUnits_thenShouldNotBeEquals() {
-        Quantity oneGallon = QuantityFactory.getGallonQuantity(1.0);//new Quantity(1.0, Units.gallon);
-        Quantity oneFeet = QuantityFactory.getFeetQuantity(1.0);//new Quantity(1.0, Units.feet);
+        Quantity oneGallon = QuantityFactory.getGallonQuantity(1.0);
+        Quantity oneFeet = QuantityFactory.getFeetQuantity(1.0);
 
         assertFalse(oneGallon.equals(oneFeet));
     }

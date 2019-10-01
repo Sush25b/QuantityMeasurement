@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.thoughtworks.measure.QuantityTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2019-10-01T05:21:53" hostname="Sushants-MacBook-Pro.local" time="0.004">
+<testsuite name="com.thoughtworks.measure.QuantityTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2019-10-01T10:10:29" hostname="Sushants-MacBook-Pro.local" time="0.003">
   <properties/>
   <testcase name="givenFeetAsZeroAndInchAsZero_whenCompareBoth_thenShouldBeEqual" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
   <testcase name="givenFeetAsOneAndInchAsTwelve_whenCompareBoth_thenShouldBeTrue" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
@@ -10,7 +10,7 @@
   <testcase name="givenFirstFeetValueAsOneAndSecondFeetValueAsTwo_whenCompareFeet_thenShouldNotBeEqual" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
   <testcase name="givenInchAsTwelveAndFeetAsOne_whenCompareBoth_thenShouldBeTrue" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
   <testcase name="givenInchAsZero_whenCompareInch_thenShouldBeEqual" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
-  <testcase name="givenFirstInchAsOneAndSecondInchAsTwo_whenCompareFeet_thenShouldNotBeEqual" classname="com.thoughtworks.measure.QuantityTest" time="0.001"/>
+  <testcase name="givenFirstInchAsOneAndSecondInchAsTwo_whenCompareFeet_thenShouldNotBeEqual" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
   <testcase name="givenInchAsZeroAndNull_whenCompareInch_thenShouldNotBeEqual" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
   <testcase name="givenInchAsOne_whenCompareInch_thenShouldBeEqual" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
   <testcase name="givenInchAsTwelveAndInchAsTwelve_whenCompareBoth_thenShouldBeTrue" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
@@ -18,19 +18,6 @@
   <testcase name="givenFeetAsOneAndNull_whenCompareFeet_thenShouldNoteBeEqual" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
   <testcase name="givenFeetAsThreeAndInchAsThirtySix_whenCompareBoth_thenShouldBeTrue" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
   <testcase name="givenFeetAsOneAndAObject_whenCompareFeet_thenShouldNoteBeEqual" classname="com.thoughtworks.measure.QuantityTest" time="0.0"/>
-  <system-out><![CDATA[0.0yhdhdshdgg
-12.0yhdhdshdgg
-0.0yhdhdshdgg
-12.0yhdhdshdgg
-24.0yhdhdshdgg
-12.0yhdhdshdgg
-12.0yhdhdshdgg
-12.0yhdhdshdgg
-0.0yhdhdshdgg
-1.0yhdhdshdgg
-1.0yhdhdshdgg
-12.0yhdhdshdgg
-36.0yhdhdshdgg
-]]></system-out>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

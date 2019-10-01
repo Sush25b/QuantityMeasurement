@@ -1,21 +1,20 @@
 package com.thoughtworks.measure.volume;
 
-import com.thoughtworks.measure.IUnits;
-import com.thoughtworks.measure.Measurement;
+import com.thoughtworks.measure.IUnit;
 import com.thoughtworks.measure.Quantity;
 
-public class Gallon implements IUnits
+public class Gallon implements IUnit
 {
     private double converter =3.78;
-    protected final Measurement measurement= Measurement.volume;
 
     @Override
-    public Measurement getMeasurement() {
-        return measurement;
+    public IUnit getBaseUnit() {
+        return new Liter();
     }
 
     @Override
-    public double convertToBase(Quantity quantity) {
-        return quantity.value * converter;
+    public double convertToBase(double value) {
+        return value*converter;
     }
+
 }
