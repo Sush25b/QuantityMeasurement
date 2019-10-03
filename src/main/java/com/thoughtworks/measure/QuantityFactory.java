@@ -11,19 +11,19 @@ import com.thoughtworks.measure.weight.Kilogram;
 
 public class QuantityFactory
 {
-    public static Quantity getInchQuantity(double value) { return new Quantity(value, new Inch()); }
+    public static AddableQuantity getInchQuantity(double value) { return new AddableQuantity(value, new Inch()); }
 
-    public static Quantity getFeetQuantity(double value) { return new Quantity(value, new Feet()); }
+    public static AddableQuantity getFeetQuantity(double value) { return new AddableQuantity(value, new Feet()); }
 
-    public static Quantity getLiterQuantity(double value) { return new Quantity(value, new Liter()); }
+    public static AddableQuantity getLiterQuantity(double value) { return new AddableQuantity(value, new Liter()); }
 
-    public static Quantity getGallonQuantity(double value) { return new Quantity(value, new Gallon()); }
+    public static AddableQuantity getGallonQuantity(double value) { return new AddableQuantity(value, new Gallon()); }
 
-    public static Quantity getGramQuantity(double value){return  new Quantity(value, new Gram()); }
+    public static AddableQuantity getGramQuantity(double value){return  new AddableQuantity(value, new Gram()); }
 
-    public static Quantity getKilogramGramQuantity(double value){return  new Quantity(value, new Kilogram()); }
+    public static AddableQuantity getKilogramGramQuantity(double value){return new AddableQuantity(value, new Kilogram()); }
 
-    public static Quantity getCelsiusQuantity(double value){ return new Quantity(value, new Celsius()); }
+    public static Quantity getCelsiusQuantity(double value) {return new Quantity(value, new Celsius()); };
 
     public static Quantity getFahrenheitQuantity(double value){ return  new Quantity(value, new Fahrenheit());}
 

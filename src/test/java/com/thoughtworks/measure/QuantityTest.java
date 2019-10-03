@@ -180,4 +180,5 @@ public class QuantityTest {
 
         assertTrue(thirtyThreePointEightFahrenheit.equals(oneCelsius));
     }
+
 }

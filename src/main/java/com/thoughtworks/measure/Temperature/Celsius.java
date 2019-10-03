@@ -20,5 +20,4 @@ public class Celsius implements IUnit
     public boolean equals(Object obj) {
         return (obj instanceof Celsius);
     }
-
 }
