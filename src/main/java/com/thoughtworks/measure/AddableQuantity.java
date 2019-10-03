@@ -2,7 +2,7 @@ package com.thoughtworks.measure;
 
 public class AddableQuantity extends Quantity
 {
-    public AddableQuantity(double value, IUnit unit) {
+    public AddableQuantity(double value, Unit unit) {
         super(value, unit);
     }
 

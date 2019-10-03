@@ -1,14 +1,13 @@
 package com.thoughtworks.measure.length;
 
-import com.thoughtworks.measure.IUnit;
-import com.thoughtworks.measure.Quantity;
+import com.thoughtworks.measure.Unit;
 
-public class Feet implements IUnit
+public class Feet implements Unit
 {
     private double converter = 12.0;
 
     @Override
-    public IUnit getBaseUnit() {
+    public Unit getBaseUnit() {
         return new Inch();
     }
 

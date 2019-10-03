@@ -1,13 +1,13 @@
 package com.thoughtworks.measure.Temperature;
 
-import com.thoughtworks.measure.IUnit;
+import com.thoughtworks.measure.Unit;
 
-public class Celsius implements IUnit
+public class Celsius implements Unit
 {
     private double converter =1.0;
 
     @Override
-    public IUnit getBaseUnit() {
+    public Unit getBaseUnit() {
         return new Celsius();
     }
 

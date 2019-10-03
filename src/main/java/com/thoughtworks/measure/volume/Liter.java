@@ -1,14 +1,13 @@
 package com.thoughtworks.measure.volume;
 
-import com.thoughtworks.measure.IUnit;
-import com.thoughtworks.measure.Quantity;
+import com.thoughtworks.measure.Unit;
 
-public class Liter implements IUnit
+public class Liter implements Unit
 {
     private double converter =1.0;
 
     @Override
-    public IUnit getBaseUnit() {
+    public Unit getBaseUnit() {
         return new Liter();
     }
 

@@ -1,13 +1,13 @@
 package com.thoughtworks.measure.Temperature;
 
-import com.thoughtworks.measure.IUnit;
+import com.thoughtworks.measure.Unit;
 
-public class Fahrenheit implements IUnit
+public class Fahrenheit implements Unit
 {
     private double converter =33.8;
 
     @Override
-    public IUnit getBaseUnit() {
+    public Unit getBaseUnit() {
         return new Celsius();
     }
 

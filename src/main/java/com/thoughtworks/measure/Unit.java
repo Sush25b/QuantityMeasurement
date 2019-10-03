@@ -1,7 +1,7 @@
 package com.thoughtworks.measure;
 
-public interface IUnit
+public interface Unit
 {
     double convertToBase(double value);
-    IUnit getBaseUnit();
+    Unit getBaseUnit();
 }

@@ -1,13 +1,13 @@
 package com.thoughtworks.measure.weight;
 
-import com.thoughtworks.measure.IUnit;
+import com.thoughtworks.measure.Unit;
 
-public class Gram implements IUnit
+public class Gram implements Unit
 {
     private double converter =1.0;
 
     @Override
-    public IUnit getBaseUnit() {
+    public Unit getBaseUnit() {
         return new Gram();
     }
 

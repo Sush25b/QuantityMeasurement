@@ -3,9 +3,9 @@ package com.thoughtworks.measure;
 public class Quantity
 {
     public final double value;
-    protected final IUnit unit;
+    protected final Unit unit;
 
-    public Quantity(double value, IUnit unit) {
+    public Quantity(double value, Unit unit) {
         this.value = value;
         this.unit = unit;
     }
