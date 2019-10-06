@@ -1,6 +1,10 @@
-.gradle
+.gradle/
+gradle
 .idea
-gradlew
-gradlew.bat
 temp.java
 temp
+build.gradle
+build/
+out/
+
+
